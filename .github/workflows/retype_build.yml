@@ -36,9 +36,9 @@ jobs:
           cat .inject/code.js >> ${{ steps.retypebuild.outputs.retype-output-path }}/resources/js/retype.js
       
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1.0.8
+        uses: actions/upload-pages-artifact@v3
         with:
           path: ${{ steps.retypebuild.outputs.retype-output-path }}
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4
